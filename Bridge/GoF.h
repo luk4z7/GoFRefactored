@@ -43,7 +43,7 @@ namespace BridgePattern::GoF
 
 	protected:
 		WindowImp* GetWindowImp();
-		View* GetView() { return nullptr; }
+		View* GetView() { return 0; }
 
 	private:
 		WindowImp* _imp;

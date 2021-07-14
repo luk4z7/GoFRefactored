@@ -46,7 +46,7 @@ namespace CompositePattern::GoF2
 
 		virtual void Add(Equipment*) {}
 		virtual void Remove(Equipment*) {}
-		virtual Iterator* CreateIterator() { return nullptr; }
+		virtual Iterator* CreateIterator() { return 0; }
 
 	protected:
 		CompositeEquipment(const char* name) : Equipment(name) {}

@@ -26,7 +26,7 @@ namespace FactoryMethodPattern::GoF
 	class Room : public MapSite {
 	public:
 		Room(int roomNo) {}
-		MapSite* GetSide(Direction) const { return nullptr; }
+		MapSite* GetSide(Direction) const { return 0; }
 		void SetSide(Direction, MapSite*) {}
 		virtual void Enter() {}
 	private:
@@ -152,6 +152,6 @@ namespace FactoryMethodPattern::GoF
 			return new DoorNeedingSpell(r1, r2);
 		}
 	protected:
-		Spell* CastSpell() const { return nullptr; };
+		Spell* CastSpell() const { return 0; };
 	};
 }

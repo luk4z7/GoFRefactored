@@ -6,7 +6,7 @@ namespace BuilderPattern::GoF
 
 	class Maze {
 	public:
-		Room* RoomNo(int) { return nullptr; }
+		Room* RoomNo(int) { return 0; }
 		void AddRoom(Room*) {}
 	};
 
@@ -70,7 +70,7 @@ namespace BuilderPattern::GoF
 	class Room : public MapSite {
 	public:
 		Room(int roomNo) {}
-		MapSite* GetSide(Direction) const { return nullptr; }
+		MapSite* GetSide(Direction) const { return 0; }
 		void SetSide(Direction, MapSite*) {}
 		virtual void Enter() {}
 	private:

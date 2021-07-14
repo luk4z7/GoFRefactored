@@ -37,7 +37,7 @@ namespace StatePattern::Variant1
 
 	class TCPEstablished : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 
 		virtual void Transmit(TCPConnection*, TCPOctetStream*);
 		virtual TCPState::State Close(TCPConnection*);
@@ -54,7 +54,7 @@ namespace StatePattern::Variant1
 
 	class TCPListen : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 		virtual TCPState::State Send(TCPConnection*);
 		// ...  
 	};
@@ -66,7 +66,7 @@ namespace StatePattern::Variant1
 
 	class TCPClosed : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 		virtual TCPState::State ActiveOpen(TCPConnection*);
 		virtual TCPState::State PassiveOpen(TCPConnection*);
 		// ...     
@@ -105,7 +105,7 @@ namespace StatePattern::Variant1
 				return TCPListen::Instance();
 				break;
 			}
-			return nullptr;
+			return 0;
 		}
 	private:
 		TCPConnection* _connection;

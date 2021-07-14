@@ -25,7 +25,7 @@ namespace MementoPattern::GoF2
 
 	class ConstraintSolver {
 	public:
-		static ConstraintSolver* Instance() { return nullptr; }
+		static ConstraintSolver* Instance() { return 0; }
 		void Solve() {}
 		void AddConstraint(
 			Graphic* startConnection, Graphic* endConnection
@@ -33,7 +33,7 @@ namespace MementoPattern::GoF2
 		void RemoveConstraint(
 			Graphic* startConnection, Graphic* endConnection
 		) {}
-		ConstraintSolverMemento* CreateMemento() { return nullptr; }
+		ConstraintSolverMemento* CreateMemento() { return 0; }
 		void SetMemento(ConstraintSolverMemento*) {}
 	private:
 		// nontrivial state and operations for enforcing 

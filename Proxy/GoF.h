@@ -3,7 +3,7 @@
 namespace ProxyPattern::GoF
 {
 	class Image;
-	Image* LoadAnImageFile(const char*) { return nullptr; }
+	Image* LoadAnImageFile(const char*) { return 0; }
 	// external function 
 
 	class ImagePtr {

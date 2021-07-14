@@ -66,7 +66,7 @@ namespace StatePattern::GoF
 
 	class TCPEstablished : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 
 		virtual void Transmit(TCPConnection*, TCPOctetStream*);
 		virtual void Close(TCPConnection*);
@@ -74,14 +74,14 @@ namespace StatePattern::GoF
 
 	class TCPListen : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 		virtual void Send(TCPConnection*);
 		// ...  
 	};
 
 	class TCPClosed : public TCPState {
 	public:
-		static TCPState* Instance() { return nullptr; }
+		static TCPState* Instance() { return 0; }
 		virtual void ActiveOpen(TCPConnection*);
 		virtual void PassiveOpen(TCPConnection*);
 		// ...     

@@ -19,7 +19,7 @@ namespace AdapterPattern::GoF
 		virtual void BoundingBox(
 			Point& bottomLeft, Point& topRight
 		) const {}
-		virtual Manipulator* CreateManipulator() const { return nullptr; }
+		virtual Manipulator* CreateManipulator() const { return 0; }
 	};
 
 	class TextManipulator : public Manipulator {

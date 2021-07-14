@@ -28,7 +28,7 @@ namespace PrototypePattern::GoF
 	public:
 		Room() {}
 		Room(int roomNo) {}
-		MapSite* GetSide(Direction) const { return nullptr; }
+		MapSite* GetSide(Direction) const { return 0; }
 		void SetSide(Direction, MapSite*) {}
 		virtual void Enter() {}
 	private:
@@ -95,8 +95,8 @@ namespace PrototypePattern::GoF
 	public:
 		MazePrototypeFactory(Maze*, Wall*, Room*, Door*);
 
-		virtual Maze* MakeMaze() const { return nullptr; }
-		virtual Room* MakeRoom(int) const { return nullptr; }
+		virtual Maze* MakeMaze() const { return 0; }
+		virtual Room* MakeRoom(int) const { return 0; }
 		virtual Wall* MakeWall() const;
 		virtual Door* MakeDoor(Room*, Room*) const;
 
@@ -129,7 +129,7 @@ namespace PrototypePattern::GoF
 	class MazeGame
 	{
 	public:
-		Maze* CreateMaze(MazeFactory& factory) { return nullptr; }
+		Maze* CreateMaze(MazeFactory& factory) { return 0; }
 	};
 
 }

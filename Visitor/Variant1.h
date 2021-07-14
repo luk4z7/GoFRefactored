@@ -58,7 +58,7 @@ namespace VisitorPattern::Variant1
 			auto id = el->Id();
 			std::cout << id;
 			auto comp = dynamic_cast<CompositeElement*>(el);
-			if (comp != nullptr)
+			if (comp != 0)
 				comp->Accept(*this);
 		}
 	};

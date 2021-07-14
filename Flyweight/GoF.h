@@ -13,12 +13,12 @@ namespace FlyweightPattern::GoF
 		virtual void Draw(Window*, GlyphContext&) {}
 
 		virtual void SetFont(Font*, GlyphContext&) {}
-		virtual Font* GetFont(GlyphContext&) { return nullptr; }
+		virtual Font* GetFont(GlyphContext&) { return 0; }
 
 		virtual void First(GlyphContext&) {}
 		virtual void Next(GlyphContext&) {}
 		virtual bool IsDone(GlyphContext&) { return true; }
-		virtual Glyph* Current(GlyphContext&) { return nullptr; }
+		virtual Glyph* Current(GlyphContext&) { return 0; }
 
 		virtual void Insert(Glyph*, GlyphContext&) {}
 		virtual void Remove(GlyphContext&) {}

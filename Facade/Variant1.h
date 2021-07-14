@@ -52,26 +52,26 @@ namespace FacadePattern::Variant1
 		virtual ProgramNode* NewVariable(
 			const char* variableName
 		) const {
-			return nullptr;
+			return 0;
 		}
 
 		virtual ProgramNode* NewAssignment(
 			ProgramNode* variable, ProgramNode* expression
 		) const {
-			return nullptr;
+			return 0;
 		}
 
 		virtual ProgramNode* NewReturnStatement(
 			ProgramNode* value
 		) const {
-			return nullptr;
+			return 0;
 		}
 
 		virtual ProgramNode* NewCondition(
 			ProgramNode* condition,
 			ProgramNode* truePart, ProgramNode* falsePart
 		) const {
-			return nullptr;
+			return 0;
 		}
 		// ... 
 

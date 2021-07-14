@@ -93,23 +93,23 @@ namespace InterpreterPattern::GoF
 	public:
 		Constant(bool) {}
 		virtual bool Evaluate(Context&) { return true; }
-		virtual BooleanExp* Replace(const char*, BooleanExp&) { return nullptr; }
-		virtual BooleanExp* Copy() const { return nullptr; }
+		virtual BooleanExp* Replace(const char*, BooleanExp&) { return 0; }
+		virtual BooleanExp* Copy() const { return 0; }
 	};
 
 	class OrExp : public BooleanExp {
 	public:
 		OrExp(BooleanExp*, BooleanExp*) {}
 		virtual bool Evaluate(Context&) { return true; }
-		virtual BooleanExp* Replace(const char*, BooleanExp&) { return nullptr; }
-		virtual BooleanExp* Copy() const { return nullptr; }
+		virtual BooleanExp* Replace(const char*, BooleanExp&) { return 0; }
+		virtual BooleanExp* Copy() const { return 0; }
 	};
 
 	class NotExp : public BooleanExp {
 	public:
 		NotExp(BooleanExp*) {}
 		virtual bool Evaluate(Context&) { return true; }
-		virtual BooleanExp* Replace(const char*, BooleanExp&) { return nullptr; }
-		virtual BooleanExp* Copy() const { return nullptr; }
+		virtual BooleanExp* Replace(const char*, BooleanExp&) { return 0; }
+		virtual BooleanExp* Copy() const { return 0; }
 	};
 }

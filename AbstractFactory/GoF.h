@@ -26,7 +26,7 @@ namespace AbstractFactoryPattern::GoF
 	class Room : public MapSite {
 	public:
 		Room(int roomNo) {}
-		MapSite* GetSide(Direction) const { return nullptr; }
+		MapSite* GetSide(Direction) const { return 0; }
 		void SetSide(Direction, MapSite*) {}
 		virtual void Enter() {}
 	private:
@@ -132,7 +132,7 @@ namespace AbstractFactoryPattern::GoF
 		}
 
 	protected:
-		Spell* CastSpell() const { return nullptr; }
+		Spell* CastSpell() const { return 0; }
 	};
 
 	class BombedMazeFactory : public MazeFactory {

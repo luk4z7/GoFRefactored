@@ -36,7 +36,7 @@ namespace MediatorPattern::Variant1
 	class ListBox : public Widget {
 	public:
 		ListBox(DialogDirector* d) : Widget(d) {}
-		virtual const char* GetSelection() { return nullptr; }
+		virtual const char* GetSelection() { return 0; }
 		virtual void SetList(std::list<char*>* listItems) {}
 		virtual void HandleMouse(MouseEvent& event) {}
 		// ...  
@@ -46,7 +46,7 @@ namespace MediatorPattern::Variant1
 	public:
 		EntryField(DialogDirector* d) : Widget(d) {}
 		virtual void SetText(const char* text) {}
-		virtual const char* GetText() { return nullptr; }
+		virtual const char* GetText() { return 0; }
 		virtual void HandleMouse(MouseEvent& event) {}
 		// ... 
 	};

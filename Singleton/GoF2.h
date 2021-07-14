@@ -11,13 +11,13 @@ namespace SingletonPattern::GoF2
 		static void Register(const char* name, Singleton*) {}
 		static Singleton* Instance();
 	protected:
-		static Singleton* Lookup(const char* name) { return nullptr; }
+		static Singleton* Lookup(const char* name) { return 0; }
 	private:
 		static Singleton* _instance;
 		static std::list<NameSingletonPair>* _registry;
 	};
 
-	Singleton* Singleton::_instance = nullptr;
+	Singleton* Singleton::_instance = 0;
 
 	Singleton* Singleton::Instance() {
 		if (_instance == 0) {
@@ -40,5 +40,5 @@ namespace SingletonPattern::GoF2
 		Singleton::Register("MySingleton", this);
 	}
 
-	static MySingleton* theSingleton = nullptr;
+	static MySingleton* theSingleton = 0;
 }

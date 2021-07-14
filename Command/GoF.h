@@ -24,7 +24,7 @@ namespace CommandPattern::GoF
 		OpenCommand(Application*);
 		virtual void Execute();
 	protected:
-		virtual const char* AskUser() { return nullptr; };
+		virtual const char* AskUser() { return 0; };
 	private:
 		Application* _application;
 		char* _response;
